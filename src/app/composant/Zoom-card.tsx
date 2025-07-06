@@ -100,16 +100,8 @@ export function ZoomCard({ id, title, description, buttonText = "View Details", 
 
                 <div className="grid md:grid-cols-2 gap-4 pt-4">
                   <div className="border rounded-lg p-4">
-                    <h3 className="font-medium mb-2">Related Resources</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Check out our documentation, tutorials, and community forums for more information.
-                    </p>
-                  </div>
-                  <div className="border rounded-lg p-4">
-                    <h3 className="font-medium mb-2">Need Help?</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Contact our support team for personalized assistance with any questions.
-                    </p>
+                  
+                   
                   </div>
                 </div>
               </CardContent>

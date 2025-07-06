@@ -3,13 +3,18 @@ import Card from "../composant/Card";
 
 export default function page() {
   return (
-    <main className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-1 p-1">
+    <main className="flex-1 grid  md:grid-cols-2 gap-8 p-8">
     
 
      
         <Card
           title="Présentation🙋"
-          content="I am Bilal, I am 22 years old, student in industrial informatics at Helha Charleroi. I am actively looking for an traineeship in IT, industrial automation, or web/application development."
+          content="I am Bilal, I am 22 years old, a student in industrial informatics at HELHa Charleroi.
+I am actively looking for a traineeship in IT, industrial automation, or web/application development.
+When I finished high school, I did not know what I would learn for my future.
+I was very undecided until a friend told me about programming, and I discovered IT.
+I did a lot of research during my holidays and quickly loved it. My first bachelor's was complicated because of a lack of organization. Indeed, I am the eldest son of a family where nobody had gone to a city school, so I didn’t expect the level of organization needed for such graduation.
+"
         />
         <Card
           title="Objectif🎯"
@@ -17,8 +22,7 @@ export default function page() {
         />
         <Card
           title="Hobbies⚽"
-          content="When I'm not busy, I like to participate in group sports like football or individual gym. I also enjoy reading books."
-        />
+          content="I like sports. I think it’s important for balance with the informatics profession, where we move less. I practise individual sports like fitness or walking, but I also like team sports such as football. In addition I a like long formats such as podcasts or reading."/>
         <Card
           title="Video Editing🎥"
           content="I have notions of Adobe Suite, such as Premiere Pro and Photoshop, learned by myself."

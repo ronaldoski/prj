@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="bg-[oklch(37.8%_0.077_168.94)] min-h-screen">
+        <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-700 to-green-200">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-center space-x-2 mb-8">
               <Link href="/Home">
