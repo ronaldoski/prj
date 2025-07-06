@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 
 interface ZoomCardProps {
-  id: string
   title: string
   description: string
   buttonText?: string
@@ -20,7 +19,7 @@ interface ZoomCardProps {
   }
 }
 
-export function ZoomCard({ id, title, description, buttonText = "View Details", detailedInfo = {} }: ZoomCardProps) {
+export function ZoomCard({ title, description, buttonText = "View Details", detailedInfo = {} }: ZoomCardProps) {
   const [isZoomed, setIsZoomed] = useState(false)
 
   // Default values for detailed info if not provided
