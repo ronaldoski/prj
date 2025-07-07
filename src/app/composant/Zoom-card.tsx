@@ -6,11 +6,14 @@ import { useState } from "react"
 import { X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import Image, { StaticImageData } from "next/image"
 
 interface ZoomCardProps {
   title: string
   description: string
   buttonText?: string
+  imageSrc?: string | StaticImageData // Optionnel : chemin de l'image
+  imageAlt?: string // Optionnel : texte alternatif
   detailedInfo?: {
     subtitle?: string
     fullDescription?: string
@@ -19,7 +22,14 @@ interface ZoomCardProps {
   }
 }
 
-export function ZoomCard({ title, description, buttonText = "View Details", detailedInfo = {} }: ZoomCardProps) {
+export function ZoomCard({
+  title,
+  description,
+  buttonText = "View Details",
+  imageSrc,
+  imageAlt = "",
+  detailedInfo = {},
+}: ZoomCardProps) {
   const [isZoomed, setIsZoomed] = useState(false)
 
   // Default values for detailed info if not provided
@@ -38,6 +48,19 @@ export function ZoomCard({ title, description, buttonText = "View Details", deta
           <CardTitle>{title}</CardTitle>
         </CardHeader>
         <CardContent>
+          {imageSrc && (
+            <div className="relative w-full h-40 mb-3">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                className="rounded-lg object-cover"
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 640px) 100vw, 400px"
+                priority={false}
+              />
+            </div>
+          )}
           <p className="text-sm text-muted-foreground">{description}</p>
         </CardContent>
         <CardFooter>
@@ -72,6 +95,19 @@ export function ZoomCard({ title, description, buttonText = "View Details", deta
                 </Button>
               </CardHeader>
               <CardContent className="space-y-6">
+                {imageSrc && (
+                  <div className="relative w-full mb-4" style={{ height: "320px" }}>
+                    <Image
+                      src={imageSrc}
+                      alt={imageAlt}
+                      fill
+                      className="rounded-xl object-cover"
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 1024px) 100vw, 600px"
+                      priority={false}
+                    />
+                  </div>
+                )}
                 <div>
                   <h3 className="text-lg font-medium mb-2">Overview</h3>
                   <p className="text-muted-foreground">{fullDescription}</p>
@@ -96,13 +132,6 @@ export function ZoomCard({ title, description, buttonText = "View Details", deta
                     {additionalContent}
                   </div>
                 )}
-
-                <div className="grid md:grid-cols-2 gap-4 pt-4">
-                  <div className="border rounded-lg p-4">
-                  
-                   
-                  </div>
-                </div>
               </CardContent>
               <CardFooter className="flex justify-end">
                 <Button onClick={() => setIsZoomed(false)}>Close</Button>

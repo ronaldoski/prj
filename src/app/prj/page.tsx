@@ -2,26 +2,37 @@
 import React from "react";
 import { ZoomCard } from "../composant/Zoom-card";
 
+// Importation des images du dossier images
+import auto from "../images/auto.jpg";
+import auto2 from "../images/auto2.jpg";
+import PRJ from "../images/PRJ.jpg";
+import prj2 from "../images/prj2.jpg";
+import PRJ3 from "../images/PRJ3.jpg";
+import PWM from "../images/PWM.jpg";
+import SENS from "../images/SENS.jpg";
+import INDU from "../images/INDU.jpg";
 export default function Page() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-
-<ZoomCard
+      <ZoomCard
         title="Dyce game"
         description="My initial academic project focused on a dice game that was randomly selected."
         buttonText="More"
+        imageSrc={PRJ}
+        imageAlt="Dyce game project"
         detailedInfo={{
           subtitle: "Disciplinary Project",
           fullDescription:
             "My initial academic project focused on a dice game that was randomly selected. My team and I had to code an app that randomly throws two dice and displays their values on the computer and an electronic model. As part of our first project, our teachers introduced us to professional organization systems like mind maps, Gantt, and PERT charts. Furthermore, each team had meetings every week to discuss their research, misunderstandings, or improvements. In the middle of the year one of my team left the school so I had to switch beetwen my initial task and other task release by my old teammates. This challenge has really improved my versatile ability. This project has also helped me in managing shy because in different meeting we had to speak a lot.",
-        }} />
-
-
+        }}
+      />
 
       <ZoomCard
         title="Defense Turret"
         description="The third disciplinary project was a solo endeavor."
         buttonText="More"
+        imageSrc={PRJ3}
+        imageAlt="Defense Turret project"
         detailedInfo={{
           subtitle: "Defense Turret",
           fullDescription:
@@ -29,10 +40,13 @@ export default function Page() {
         }}
       />
 
-<ZoomCard
+      <ZoomCard
         title="Automate Simulation"
         description="First automate project."
         buttonText="More"
+    imageSrc={auto}
+        imageAlt="automate simulation project"
+        
         detailedInfo={{
           subtitle: "Automate Simulation",
           fullDescription:
@@ -40,10 +54,12 @@ export default function Page() {
         }}
       />
 
-<ZoomCard
+      <ZoomCard
         title="Physic Project Automate"
         description="The second automation project involved wiring an automation system to the current."
         buttonText="More"
+        imageSrc={auto2}
+        imageAlt="Physical Project Automate"
         detailedInfo={{
           subtitle: "Physical Project",
           fullDescription:
@@ -51,10 +67,12 @@ export default function Page() {
         }}
       />
 
-<ZoomCard
+      <ZoomCard
         title="Automation with PID and PWM"
         description="As part of this project, we had to turn a heated LED on or off using two buttons (ON and OFF)."
         buttonText="More"
+        imageSrc={PWM}
+        imageAlt="automate simulation project"
         detailedInfo={{
           subtitle: "Automation with PID and PWM",
           fullDescription:
@@ -62,10 +80,12 @@ export default function Page() {
         }}
       />
 
-<ZoomCard
+      <ZoomCard
         title="Industrial Project"
         description="This is an IT/ET project including embedded, website, and VR part."
         buttonText="More"
+        imageSrc={INDU}
+        imageAlt="Industrial Project"
         detailedInfo={{
           subtitle: "Technocampus All In One Project",
           fullDescription:
@@ -73,27 +93,31 @@ export default function Page() {
         }}
       />
 
-<ZoomCard
+      <ZoomCard
         title="Sensor Traineeship"
         description="Is a technocampus traineeship about different sensors."
         buttonText="More"
+        imageAlt="Sensor Traineeship"
+        imageSrc={SENS}
         detailedInfo={{
           subtitle: "Sensor Traineeship",
           fullDescription:
             "One of the technocampus training courses that I carried out consisted of identifying sensors, analyzing their sign and searching for the operating point of the PID adjustment. I carried out tests on speed, flow and level sensors.",
-    }}
-  />
+        }}
+      />
 
-  <ZoomCard
-    title="Sorting Balls"
-    description="A disciplinary project involving the sorting of yellow and pink balls into three different crates."
-    buttonText="More"
-    detailedInfo={{
-      subtitle: "Sorting Balls",
-      fullDescription:
-        "The second disciplinary project involved sorting two types of balls, yellow and pink, into three different crates: one for yellow, one for pink, and one for the others. An embedded system with sensors, motors, and other components was required to display data on a website with access to history and live data, as well as a focus on design and physical structure. After a lot of 3D modeling and research on components, my team came up with the idea of a rollercoaster. An object is thrown into the system, its color is checked by an AI camera named HuskyLens (trained to detect yellow and pink balls). If the camera detects the ball's color correctly, it directs it to the corresponding crate. If the object is unknown, or the crate is full, the ball goes to the 'other' crate. All steps are displayed on an LCD connected via I2C communication and on a website. JavaScript and Twig templates for the frontend, and Bootstrap for the design, were the main components used in the development of the website using the Express.js framework. Our website runs with Node.js. At the end of the project, we were interviewed by Télésambre, who wanted to learn more about our work. I had a lot of difficulty at the start of the project because I’m often distracted, which made teamwork challenging.",
-    }}
-  />
-</div>
+      <ZoomCard
+        title="Sorting Balls"
+        description="A disciplinary project involving the sorting of yellow and pink balls into three different crates."
+        buttonText="More"
+        imageSrc={prj2}
+        imageAlt="Sorting Balls"
+        detailedInfo={{
+          subtitle: "Sorting Balls",
+          fullDescription:
+            "The second disciplinary project involved sorting two types of balls, yellow and pink, into three different crates: one for yellow, one for pink, and one for the others. An embedded system with sensors, motors, and other components was required to display data on a website with access to history and live data, as well as a focus on design and physical structure. After a lot of 3D modeling and research on components, my team came up with the idea of a rollercoaster. An object is thrown into the system, its color is checked by an AI camera named HuskyLens (trained to detect yellow and pink balls). If the camera detects the ball's color correctly, it directs it to the corresponding crate. If the object is unknown, or the crate is full, the ball goes to the 'other' crate. All steps are displayed on an LCD connected via I2C communication and on a website. JavaScript and Twig templates for the frontend, and Bootstrap for the design, were the main components used in the development of the website using the Express.js framework. Our website runs with Node.js. At the end of the project, we were interviewed by Télésambre, who wanted to learn more about our work. I had a lot of difficulty at the start of the project because I’m often distracted, which made teamwork challenging.",
+        }}
+      />
+    </div>
   );
 }
