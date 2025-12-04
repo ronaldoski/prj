@@ -16,20 +16,20 @@ export default function Page() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
       <ZoomCard
         title="Dyce game"
-        description="My initial academic project focused on a dice game that was randomly selected."
+        keywords={["group"]}
         buttonText="More"
         imageSrc={PRJ}
         imageAlt="Dyce game project"
         detailedInfo={{
           subtitle: "Disciplinary Project",
           fullDescription:
-            "My initial academic project focused on a dice game that was randomly selected. My team and I had to code an app that randomly throws two dice and displays their values on the computer and an electronic model. As part of our first project, our teachers introduced us to professional organization systems like mind maps, Gantt, and PERT charts. Furthermore, each team had meetings every week to discuss their research, misunderstandings, or improvements. In the middle of the year one of my team left the school so I had to switch beetwen my initial task and other task release by my old teammates. This challenge has really improved my versatile ability. This project has also helped me in managing shy because in different meeting we had to speak a lot.",
+            "My initial academic project focused on a dice game that was randomly selected. My team and I had to code an app that randomly throws two dice and displays their values on the computer and an electronic model. As part of our first project, our teachers introduced us to professional organization systems like mind maps, Gantt, and PERT charts. Furthermore, each team had meetings every week to discuss their research, misunderstandings, or improvements. In the middle of the year one of my team left the school so I had to switch beetwen my initial task and other task release by my previous teammates. This challenge has really improved my versatile ability. This project has also helped me in managing shyness because in different meeting we had to speak a lot.",
         }}
       />
 
       <ZoomCard
         title="Defense Turret"
-        description="The third disciplinary project was a solo endeavor."
+        keywords={["solo"]}
         buttonText="More"
         imageSrc={PRJ3}
         imageAlt="Defense Turret project"
@@ -42,7 +42,7 @@ export default function Page() {
 
       <ZoomCard
         title="Automate Simulation"
-        description="First automate project."
+        keywords={["solo"]}
         buttonText="More"
     imageSrc={auto}
         imageAlt="automate simulation project"
@@ -56,7 +56,7 @@ export default function Page() {
 
       <ZoomCard
         title="Physic Project Automate"
-        description="The second automation project involved wiring an automation system to the current."
+        keywords={["group"]}
         buttonText="More"
         imageSrc={auto2}
         imageAlt="Physical Project Automate"
@@ -69,7 +69,7 @@ export default function Page() {
 
       <ZoomCard
         title="Automation with PID and PWM"
-        description="As part of this project, we had to turn a heated LED on or off using two buttons (ON and OFF)."
+        keywords={["group"]}
         buttonText="More"
         imageSrc={PWM}
         imageAlt="automate simulation project"
@@ -82,7 +82,7 @@ export default function Page() {
 
       <ZoomCard
         title="Industrial Project"
-        description="This is an IT/ET project including embedded, website, and VR part."
+        keywords={["group"]}
         buttonText="More"
         imageSrc={INDU}
         imageAlt="Industrial Project"
@@ -95,7 +95,7 @@ export default function Page() {
 
       <ZoomCard
         title="Sensor Traineeship"
-        description="Is a technocampus traineeship about different sensors."
+        keywords={["group"]}
         buttonText="More"
         imageAlt="Sensor Traineeship"
         imageSrc={SENS}
@@ -108,7 +108,7 @@ export default function Page() {
 
       <ZoomCard
         title="Sorting Balls"
-        description="A disciplinary project involving the sorting of yellow and pink balls into three different crates."
+            keywords={["group"]}
         buttonText="More"
         imageSrc={prj2}
         imageAlt="Sorting Balls"

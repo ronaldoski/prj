@@ -27,11 +27,15 @@ export default function RootLayout({
               <Link href="/Home">
                 <Button label="Accueil" />
               </Link>
-              <Link href="/contact">
-                <Button label="Contact" className="ml-2" />
-              </Link>
+             
               <Link href="/prj">
                 <Button label="Projet" className="ml-2" />
+              </Link>
+              <Link href="/Softskills">
+                <Button label="Softskills" className="ml-2" />
+              </Link>
+               <Link href="/contact">
+                <Button label="Contact" className="ml-2" />
               </Link>
             </div>
             {children}

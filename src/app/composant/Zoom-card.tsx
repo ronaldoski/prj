@@ -10,7 +10,7 @@ import Image, { StaticImageData } from "next/image"
 
 interface ZoomCardProps {
   title: string
-  description: string
+  keywords?: string[]
   buttonText?: string
   imageSrc?: string | StaticImageData // Optionnel : chemin de l'image
   imageAlt?: string // Optionnel : texte alternatif
@@ -24,7 +24,7 @@ interface ZoomCardProps {
 
 export function ZoomCard({
   title,
-  description,
+  keywords = [],
   buttonText = "View Details",
   imageSrc,
   imageAlt = "",
@@ -35,7 +35,7 @@ export function ZoomCard({
   // Default values for detailed info if not provided
   const {
     subtitle = "Additional Information",
-    fullDescription = description,
+    fullDescription = (keywords && keywords.length > 0) ? keywords.join(', ') : '',
     features = [],
     additionalContent,
   } = detailedInfo
@@ -61,7 +61,20 @@ export function ZoomCard({
               />
             </div>
           )}
-          <p className="text-sm text-muted-foreground">{description}</p>
+          {keywords && keywords.length > 0 ? (
+            <div className="flex flex-wrap gap-2">
+              {keywords.map((kw, i) => (
+                <span
+                  key={i}
+                  className="text-sm text-muted-foreground border px-2 py-1 rounded-md bg-muted/5"
+                >
+                  {kw}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-muted-foreground rounded-lg">No keywords provided.</p>
+          )}
         </CardContent>
         <CardFooter>
           <Button onClick={() => setIsZoomed(true)}>{buttonText}</Button>
@@ -110,7 +123,19 @@ export function ZoomCard({
                 )}
                 <div>
                   <h3 className="text-lg font-medium mb-2">Overview</h3>
-                  <p className="text-muted-foreground">{fullDescription}</p>
+                  {fullDescription ? (
+                    <p className="text-muted-foreground">{fullDescription}</p>
+                  ) : (
+                    keywords && keywords.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {keywords.map((kw, i) => (
+                          <span key={i} className="text-sm text-muted-foreground border px-2 py-1 rounded-md bg-muted/5">
+                            {kw}
+                          </span>
+                        ))}
+                      </div>
+                    )
+                  )}
                 </div>
 
                 {features.length > 0 && (
