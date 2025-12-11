@@ -15,7 +15,7 @@ export default function ContactPage() {
             label={showCv ? "Masquer le CV" : "Afficher le CV"} 
             onClick={() => setShowCv(!showCv)} 
           />
-          <a href="/cv.pdf" download className="flex justify-center">
+          <a href="/cv2_ANG.pdf" download className="flex justify-center">
             <Button label="Télécharger" />
           </a>
         </div>
@@ -23,7 +23,7 @@ export default function ContactPage() {
         {showCv && (
           <div className="w-full flex justify-center mb-4">
             <iframe
-              src="/cv.pdf"
+              src="/cv2_ANG.pdf"
               width="100%"
               height="600px"
               className="rounded-xl bg-white max-w-3xl"

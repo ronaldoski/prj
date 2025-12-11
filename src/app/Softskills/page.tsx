@@ -5,11 +5,7 @@ export default function SoftskillsPage() {
   return (
     <div className="flex-1 grid md:grid-cols-2 gap-8 p-8">
       {/* Main presentation card */}
-      <Card
-        title="👋 Introduction"
-        content="I am Bilal, 22 years old, a student in industrial informatics at HELHa Charleroi. 
-        I am actively looking for a traineeship in IT, industrial automation, or web/application development."
-      />
+   
 
       {/* High-Tech Passion */}
       <Card

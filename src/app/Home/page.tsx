@@ -8,7 +8,7 @@ export default function page() {
 
      
         <Card
-          title="Présentation🙋"
+          title="Presentation🙋"
           content="I am Bilal, I am 22 years old, a student in industrial informatics at HELHa Charleroi.
 I am actively looking for a traineeship in IT, industrial automation, or web/application development.
 When I finished high school, I did not know what I would learn for my future.
@@ -17,7 +17,7 @@ I did a lot of research during my holidays and quickly loved it. My first bachel
 "
         />
         <Card
-          title="Objectif🎯"
+          title="Objective🎯"
           content="I would like to find a traineeship in IT, web or mobile programming, in industrial automation on machines such as Schneider or Siemens."
         />
         <Card
