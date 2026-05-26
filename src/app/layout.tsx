@@ -1,7 +1,7 @@
 import Button from "./composant/Button";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Link from 'next/link';
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,23 +19,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-700 to-green-200">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="flex items-center justify-center space-x-2 mb-8">
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
               <Link href="/Home">
-                <Button label="Accueil" />
+                <Button label="Home" />
               </Link>
              
               <Link href="/prj">
-                <Button label="Projet" className="ml-2" />
+                <Button label="Projects" />
               </Link>
               <Link href="/Softskills">
-                <Button label="Softskills" className="ml-2" />
+                <Button label="Soft Skills" />
+              </Link>
+              <Link href="/interne-ship">
+                <Button label="Internship" />
               </Link>
                <Link href="/contact">
-                <Button label="Contact" className="ml-2" />
+                <Button label="Contact" />
               </Link>
             </div>
             {children}

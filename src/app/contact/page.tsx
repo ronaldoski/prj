@@ -12,11 +12,11 @@ export default function ContactPage() {
       <footer className="bg-gray-800 text-white py-4 mt-8 rounded-xl px-4">
         <div className="flex flex-col sm:flex-row gap-4 mb-4 justify-center">
           <Button 
-            label={showCv ? "Masquer le CV" : "Afficher le CV"} 
+            label={showCv ? "Hide CV" : "Show CV"} 
             onClick={() => setShowCv(!showCv)} 
           />
           <a href="/cv2_ANG.pdf" download className="flex justify-center">
-            <Button label="Télécharger" />
+            <Button label="Download" />
           </a>
         </div>
         
@@ -27,7 +27,7 @@ export default function ContactPage() {
               width="100%"
               height="600px"
               className="rounded-xl bg-white max-w-3xl"
-              title="CV de Bilal Drabo"
+              title="Bilal Drabo CV"
               aria-label="Curriculum Vitae"
             />
           </div>

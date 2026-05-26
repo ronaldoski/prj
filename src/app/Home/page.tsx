@@ -1,10 +1,23 @@
 import React from "react";
+import Image from "next/image";
 import Card from "../composant/Card";
 
 export default function page() {
   return (
     <main className="flex-1 grid  md:grid-cols-2 gap-8 p-8">
-    
+      <section className="md:col-span-2 bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+        <Image
+          src="/logos/helha.png"
+          alt="HELHa logo"
+          width={260}
+          height={160}
+          className="h-auto w-56 object-contain"
+          priority
+        />
+        <p className="text-gray-700 mt-3">
+          Industrial IT student at HELHa Charleroi.
+        </p>
+      </section>
 
      
         <Card
